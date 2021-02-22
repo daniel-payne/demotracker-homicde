@@ -30,7 +30,7 @@ export default function drawAxis({ targetSVG, dataset, height, width, margin }) 
 
   svg
     .select('.x-axis-group')
-    .attr('transform', `translate(${margin.left},${height - margin.bottom})`)
+    .attr('transform', `translate(${margin.left},${height - margin.top / 2})`)
     .call(xAxis)
 
   svg.select('.y-axis-group').attr('transform', `translate(${margin.left}, ${margin.top})`).call(yAxis)
