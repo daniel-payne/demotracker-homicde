@@ -9,6 +9,7 @@ const { dates, states } = data
 
 function App() {
   const [index, setIndex] = useState(0)
+  const [animated, setAnimated] = useState(false)
   const [width, setWidth] = useState(window.innerWidth)
   const [height, setHeight] = useState(window.innerHeight)
 
@@ -42,9 +43,9 @@ function App() {
 
   return (
     <div className="App">
-      <DateSelector dates={dates} selected={index} onSelection={setIndex} />
+      <DateSelector dates={dates} selected={index} onSelection={setIndex} animated={animated} onAnimated={setAnimated} />
       <hr />
-      <RateDisplay dataset={dataset} width={width} height={height} />
+      <RateDisplay dataset={dataset} width={width} height={height} animated={animated} />
     </div>
   )
 }
