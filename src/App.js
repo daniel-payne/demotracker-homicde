@@ -7,7 +7,7 @@ import RateDisplay from './components/RateDisplay'
 
 const { dates, states } = data
 
-function App() {
+export default function App() {
   const [index, setIndex] = useState(0)
   const [animated, setAnimated] = useState(false)
   const [width, setWidth] = useState(window.innerWidth)
@@ -49,5 +49,3 @@ function App() {
     </div>
   )
 }
-
-export default App
